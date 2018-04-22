@@ -1,0 +1,21 @@
+.minimal-artist-view {
+	width: 320px;
+	margin: 2px 0%;
+	display: inline-block;
+}
+
+.chart-position {
+	padding-right: 2px;
+	width: 30px;
+	font-size: larger;
+	float: left;
+}
+
+.artist-image {
+	float: left;
+	width: 310px;
+}
+
+.artist-name {
+	font-size: larger;
+}
