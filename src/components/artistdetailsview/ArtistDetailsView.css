@@ -1,6 +1,5 @@
 .artist-details-view .artist-name {
 	font-size: 2.5em;
-	padding-bottom: 5px;
 }
 
 .artist-details-view .artist-bio {
@@ -18,4 +17,8 @@
 	color: cadetblue;
 	float: right;
 	padding-right: 50px;
+}
+
+.artist-details-view .au-callout {
+	margin-bottom: 0px;
 }

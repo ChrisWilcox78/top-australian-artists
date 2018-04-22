@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import ArtistSummaryView from "./components/artistsummaryview/ArtistSummaryView";
-import ArtistDetailsView from "./components/artistdetailsview/ArtistDetailsView"
+import ArtistDetailsView from "./components/artistdetailsview/ArtistDetailsView";
 
 class App extends Component {
 	constructor(props) {
@@ -93,9 +93,9 @@ class App extends Component {
 		return (
 			<div className="app">
 				<header className="app-header">
-				<h1 className="app-title">Australia's Top Artists</h1>
-				<div>Powered by</div>
-				<img src={logo} className="app-logo" alt="logo" />
+					<h1 className="app-title">Australia's Top Artists</h1>
+					<div>Powered by</div>
+					<img src={logo} className="app-logo" alt="logo" />
 				</header>
 				<div className="app-content">
 					{this._renderContent()}
