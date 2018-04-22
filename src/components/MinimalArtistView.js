@@ -5,7 +5,7 @@ import './MinimalArtistView.css';
 class MinimalArtistView extends Component {
 
 	render() {
-		return <div className="minimal-artist-view">
+		return <div className="minimal-artist-view" onClick={this.props.onClick}>
 			<div>
 				<span className="chart-position">
 					{this.props.position}.
