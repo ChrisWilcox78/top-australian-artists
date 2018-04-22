@@ -1,22 +1,22 @@
-.minimal-artist-view {
+.artist-summary-view {
 	width: 320px;
 	margin: 2px 0%;
 	display: inline-block;
 	cursor: pointer;
 }
 
-.chart-position {
+.artist-summary-view .chart-position {
 	padding-right: 2px;
 	width: 30px;
 	font-size: larger;
 	float: left;
 }
 
-.artist-image {
+.artist-summary-view .artist-image {
 	float: left;
 	width: 310px;
 }
 
-.artist-name {
+.artist-summary-view .artist-name {
 	font-size: larger;
 }

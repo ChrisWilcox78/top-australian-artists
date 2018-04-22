@@ -1,0 +1,21 @@
+.artist-details-view .artist-name {
+	font-size: 2.5em;
+	padding-bottom: 5px;
+}
+
+.artist-details-view .artist-bio {
+	padding: 0px 10px;
+}
+
+.artist-details-view .artist-image {
+	float: left;
+	width: 310px;
+}
+
+.artist-details-view .back-link {
+	font-size: 1.5em;
+	cursor: pointer;
+	color: cadetblue;
+	float: right;
+	padding-right: 50px;
+}

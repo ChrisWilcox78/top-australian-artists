@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import './MinimalArtistView.css';
+import './ArtistSummaryView.css';
 
-class MinimalArtistView extends Component {
+class ArtistSummaryView extends Component {
 
 	render() {
-		return <div className="minimal-artist-view" onClick={this.props.onClick}>
+		return <div className="artist-summary-view" onClick={this.props.onClick}>
 			<div>
 				<span className="chart-position">
 					{this.props.position}.
@@ -22,4 +22,4 @@ class MinimalArtistView extends Component {
 	}
 }
 
-export default MinimalArtistView;
+export default ArtistSummaryView;
