@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './ArtistSummaryView.css';
+import './ArtistSummary.css';
 
-class ArtistSummaryView extends Component {
+class ArtistSummary extends Component {
 
 	render() {
 		return <div className="artist-summary-view" onClick={this.props.onClick}>
@@ -22,4 +22,4 @@ class ArtistSummaryView extends Component {
 	}
 }
 
-export default ArtistSummaryView;
+export default ArtistSummary;
