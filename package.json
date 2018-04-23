@@ -1,5 +1,5 @@
 {
-  "name": "music-augmenter",
+  "name": "top-australian-artists",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -61,6 +61,7 @@
     "@gov.au/callout": "^2.0.1",
     "@gov.au/direction-links": "^2.0.1",
     "@gov.au/footer": "^2.0.1",
-    "@gov.au/headings": "^2.0.1"
+    "@gov.au/headings": "^2.0.1",
+    "gh-pages": "^1.1.0"
   }
 }

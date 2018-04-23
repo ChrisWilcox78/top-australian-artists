@@ -23,7 +23,6 @@ class SummaryList extends Component {
 				position={index + 1}
 				artistName={artist.name}
 				artistImageUrl={artist.image[4]["#text"]}
-				// onClick={e => this._onSummaryItemClick(artist.mbid, e)}
 				/>
 			</Link>
 		));
