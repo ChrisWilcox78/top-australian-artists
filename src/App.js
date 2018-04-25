@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-// import ArtistSummaryView from "./components/artistsummaryview/ArtistSummaryView";
-// import ArtistDetails from "./components/artistdetails/ArtistDetails";
-// import LastFmClient from './components/lastfmclient/LastFmClient';
 import ArtistSwitch from './components/routing/ArtistSwitch';
-
+import ErrorBoundary from './components/error/ErrorBoundary';
 
 class App extends Component {
 	render() {
@@ -17,7 +14,9 @@ class App extends Component {
 					<img src={logo} className="app-logo" alt="logo" />
 				</header>
 				<div className="app-content">
+				<ErrorBoundary>
 					<ArtistSwitch />
+				</ErrorBoundary>
 				</div>
 			</div>
 		);

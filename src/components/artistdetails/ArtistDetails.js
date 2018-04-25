@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
 import './ArtistDetails.css';
 import AUdirectionLink from "@gov.au/direction-links";
 import { AUcallout } from "@gov.au/callout";
 import AUheading from "@gov.au/headings";
 import AUfooter from "@gov.au/footer";
 import { Link } from 'react-router-dom';
-import LastFmClient from '../../components/lastfmclient/LastFmClient';
+import * as LastFm from '../../components/lastfmclient/LastFmClient';
+import ErrorView from '../error/ErrorView';
 
 class ArtistDetails extends Component {
 
@@ -15,12 +15,20 @@ class ArtistDetails extends Component {
 		this.state = {
 			artistName : null,
 			artistImageUrl : null,
-			artistBio : null
+			artistBio : null,
+			inError: false
 		}
 	}
 
 	componentDidMount() {
-		LastFmClient.getArtistDetails(this.props.match.params.mbid, details => this.setState(details));
+		LastFm.getArtistDetails(this.props.match.params.mbid)
+			.then(details => this.setState(details))
+			.catch(error => this._handleDataRetrievalError(error));
+	}
+
+	_handleDataRetrievalError(error) {
+		this.setState({inError: true});
+		console.error("Error retrieving artist details. ", error);
 	}
 
 	_renderDetails() {
@@ -40,6 +48,9 @@ class ArtistDetails extends Component {
 	}
 
 	render() {
+		if (this.state.inError) {
+			return <ErrorView/>;
+		}
 		return (<div className="artist-details-view" >
 			{this.state.artistName ? this._renderDetails() : "Loading Artist Details"}
 			<AUfooter>
@@ -51,7 +62,7 @@ class ArtistDetails extends Component {
 					/>
 				</Link>
 			</AUfooter>
-		</div>)
+		</div>);
 	}
 }
 
