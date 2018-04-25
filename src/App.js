@@ -1,18 +1,14 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import ArtistSwitch from './components/routing/ArtistSwitch';
 import ErrorBoundary from './components/error/ErrorBoundary';
+import Header from './components/header/Header';
 
 class App extends Component {
 	render() {
 		return (
 			<div className="app">
-				<header className="app-header">
-					<h1 className="app-title">Australia's Top Artists</h1>
-					<div>Powered by</div>
-					<img src={logo} className="app-logo" alt="logo" />
-				</header>
+				<Header />
 				<div className="app-content">
 				<ErrorBoundary>
 					<ArtistSwitch />
