@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
 import './ArtistSummary.css';
 
 class ArtistSummary extends Component {
 
 	render() {
-		return <div className="artist-summary-view" onClick={this.props.onClick}>
+		return <div className="artist-summary-view">
 			<div>
 				<span className="chart-position">
 					{this.props.position}.
@@ -21,5 +22,11 @@ class ArtistSummary extends Component {
 		</div>
 	}
 }
+
+ArtistSummary.propTypes = {
+	artistName: PropTypes.string.isRequired,
+	position: PropTypes.number.isRequired,
+	artistImageUrl: PropTypes.string.isRequired
+};
 
 export default ArtistSummary;
