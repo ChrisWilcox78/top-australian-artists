@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Top Artists",
+  "name": "Australia's Top Artists",
   "icons": [
     {
       "src": "favicon.ico",
