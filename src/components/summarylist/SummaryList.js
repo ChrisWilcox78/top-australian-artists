@@ -31,7 +31,7 @@ class SummaryList extends Component {
 				key={artist.mbid}
 				position={index + 1}
 				artistName={artist.name}
-				artistImageUrl={artist.image[4]["#text"]}
+				artistImageUrl={artist.imageUrl}
 				/>
 			</Link>
 		));

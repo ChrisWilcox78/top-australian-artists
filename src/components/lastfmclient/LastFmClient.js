@@ -4,7 +4,7 @@ export function getTopArtists() {
 		"https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=australia&limit=10&api_key=24c990f786fd892d7c74a62505a795c8&format=json"
 	)
 	.then(results => results.json())
-	.then(json => {return json.topartists.artist;});
+	.then(json => _extractRelevantSummaryDetails(json.topartists.artist));
 }
 
 export function getArtistDetails(mbid) {
@@ -14,6 +14,16 @@ export function getArtistDetails(mbid) {
 	)
 	.then(results => results.json())
 	.then(data => _extractRelevantArtistDetails(data));
+}
+
+function _extractRelevantSummaryDetails(artistsArray) {
+	return artistsArray.map(rawArtist => {
+		return {
+			mbid: rawArtist.mbid,
+			name: rawArtist.name,
+			imageUrl: rawArtist.image[4]["#text"]
+		};
+	});
 }
 
 function _extractRelevantArtistDetails(data) {
