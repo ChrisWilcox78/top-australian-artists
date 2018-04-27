@@ -4,4 +4,8 @@ A little React app created for the purposes of gaining more experience in React 
 
 ## Some notes on the design
 
-- COMING SOON
+- I have used React-Router's BrowserRouter to provide an app navigation experience that accords with user expectations when navigating the web (i.e. distinct urls, browser history population, etc.);
+- I have employed an ErrorBoundary (not entirely successfully - some further investigation around how to handle errors occurring with promises is needed) in an attempt to centralise the error handling logic;
+- I have encapsulated the interactions with Last.fm's API within a module of functions and provided some very basic abstraction of the API's return formats in the same location;
+- I have made use of a few elements from the [DTA's UI-Kit](https://github.com/govau/uikit) on the artist details pages (mainly as a way of exploring the use of these elements);
+- I haven't written any unit or integration tests simply because this is meant to be a short exploratory project.
