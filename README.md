@@ -2,6 +2,8 @@
 
 A little React app created for the purposes of gaining more experience in React and playing around with the React Router and the Digital Transformation Agency's UI-Kit.  The app pulls the current top 10 most played artists from Last.fm, displays them, and provides a means of drilling down to get more information about them (via another interaction with the Last.fm API).
 
+**Play around with it:** <https://chriswilcox78.github.io/top-australian-artists/>
+
 ## Some notes on the design
 
 - I have used React-Router's BrowserRouter to provide an app navigation experience that accords with user expectations when navigating the web (i.e. distinct urls, browser history population, etc.);
